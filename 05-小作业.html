@@ -20,8 +20,8 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(index,m) in movies" v-on:click="changeColor(index)"
-                v-bind:class="{'active':index == current ,'pointer': true}">
+            <li v-for="(index,m) in movies" @click="changeColor(index)"
+                :class="{'active':index == current ,'pointer': true}">
                 {{m}}-{{index + 1}}
             </li>
         </ul>
@@ -52,7 +52,7 @@
         <ul>
             <li v-for=" (value,index) in datalist" :class="{'active':cuerys==index}" @click='bander(index)'
                 :title="value">
-                {{index+1}} -- {{value}}
+                {{index}} -- {{value+1}}
             </li>
         </ul>
     </div>
